@@ -1,0 +1,25 @@
+How my algorithm works:
+	It uses the Sieve of Erathones thing to generate sequential prime numbers.
+	It uses these prime numbers as indexes for pixels to read and manipulate.
+	It reads/manipulates those pixels
+	
+Help Recieved:
+	None other than help from my past self,
+	who mostly had this thing done half a year ago.
+	I did help a few other students, just helping them walk through
+	their problems, asking them questions that don't give away the
+	answer, but help them figure it out. that sort of thing.
+	
+Figure out how well your algorithm runs:
+	So, I'm not entirely sure which algorithm we're talking about.
+	I use several
+		Prime number generator.
+		Encoder
+		Decoder
+		several binary->hex->RGB converters
+
+	All of these run better than O(width*height) because they don't get used
+	on every pixel. Just the prime indexed ones.
+		
+Epirically analyze performance of your algorithm.
+	Tests included in program to be demo'd in person.
