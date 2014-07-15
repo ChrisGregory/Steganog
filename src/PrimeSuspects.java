@@ -69,7 +69,7 @@ public class PrimeSuspects
       nextPrime + ".");
     return message;
   }
-  
+  boolean first = true;
   public char pixelToChar(Color color)
   {
     String hex = colorToHex(color);
@@ -81,8 +81,12 @@ public class PrimeSuspects
     
     String charCode = binaryRed.substring(6, 8) + 
       binaryGreen.substring(6, 8) + binaryBlue.substring(6, 8);
-    
-    int charCodeInt = binaryToInteger(charCode);
+    if(first)
+    {
+    	System.out.println(charCode);
+    	first = false;
+    }
+    int charCodeInt = binaryToInteger(charCode) + 32;
     char result = (char)charCodeInt;
     
 
@@ -91,7 +95,7 @@ public class PrimeSuspects
   
   public Color charToPixel(char character, Color startingPoint)
   {
-    int charCode = character;
+    int charCode = character - 32;
     String binaryCharCode = integerToBinary(charCode);
     
 

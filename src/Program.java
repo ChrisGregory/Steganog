@@ -9,13 +9,13 @@ public class Program
   {
     PrimeSuspects ps = new PrimeSuspects();
     
-
-    String message = "";
-    File cleanImage = new File("C:/Users/cgregory/workspace/Steganog/CleanImage.png");
+    String header = "[BEGIN MESSAGE]";
+    String footer = "[END MESSAGE]";
+    String message = "The 3rd Doctor was a Ninja.";
+    File cleanImage = new File("C:/Users/Chris Gregory/Documents/GitHub/Steganog/MatrixWithMessage.PNG");
     System.out.println("File Pre-Encryption: " + ps.retrieveFromImage(cleanImage));
-    File encryptedImage = ps.embedIntoImage(cleanImage, message);
+    File encryptedImage = ps.embedIntoImage(cleanImage, header + message + footer);
     
-    encryptedImage = new File("C:/Users/cgregory/workspace/Steganog/CleanImage.png");
     System.out.println("File Post-Encryption: " + ps.retrieveFromImage(encryptedImage));
   }
   
